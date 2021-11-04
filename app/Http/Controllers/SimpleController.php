@@ -16,12 +16,12 @@ class SimpleController extends Controller
     }
 
     public function index(Request $request){
-        return $this->_simple->Get();
+        return view('simples.index');
     }
 
-    public function create(){
-        $result = $this->_simple->Create();
-        return $result;
+    public function create(Request $request){
+        $result = $this->_simple->Create($request->request->all());
+        return view('simples.generated', $result);
     }
 
 }

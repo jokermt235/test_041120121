@@ -1,5 +1,7 @@
+@extends('template')
 <div class="uk-position-center">
     <form class="uk-form" action="/simplify" method="POST">
+        @csrf <!-- {{ csrf_field() }} -->
         <div  class="uk-grid uk-text-center uk-grid-small">
             <div class="uk-width-1-2@m">
                 <input type="text" class="uk-input uk-width-xlarge@s" name="link">
