@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Optional\Simples\ISimple;
+use Illuminate\Support\Facades\View;
 
 class SimpleController extends Controller
 {
