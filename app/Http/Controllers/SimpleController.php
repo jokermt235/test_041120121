@@ -21,7 +21,7 @@ class SimpleController extends Controller
 
     public function create(Request $request){
         $result = $this->_simple->Create($request->request->all());
-        return view('simples.generated', $result);
+        return view('simples.generated', ["status"=>$result, "data" => $this->_simple->Get()]);
     }
 
 }

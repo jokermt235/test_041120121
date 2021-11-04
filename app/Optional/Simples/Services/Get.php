@@ -4,6 +4,6 @@ use App\Models\Simple;
 trait Get
 {
     public function Get(){
-        return Simple::latest()->get();
+        return Simple::orderBy('id', 'desc')->first();
     }
 }
